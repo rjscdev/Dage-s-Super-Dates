@@ -23,11 +23,25 @@ label start:
 
     # These display lines of dialogue.
 
-    a "You've created a new Ren'Py game."
-    a "this a test dialog for testing the soundtext systemaaaaaaaaaaaaaaaaaaaaaaaaaaaaasasdasdasdqwqwdqwdqwdqwd qwdqwdqw qwdqwdq"
+    Robe '''
+    esta es una {b}demo{/b} para {st}{b}testear{/b}{/st} el {b}{i}{Grd=#7a54f7-#582e80}sistema de texto{/Grd}{/i}{/b} que he creado
 
-    b "Once you add a story, pictures, and music, you can release it to the world!"
+    tambien con una pequeña parte de la introduccion para testear el mismo sistema.
 
+    el sistema de dia y noche sigue en desarrollo dado que el anterior resulto fallando.
+
+    por lo pronto esto es lo que hay, talvez no sea mucho pero es trabajo de calidad
+
+    {glitch= 50}{st}{b}ademas no es que hagan su trabajo, pinche bola de huevones de mierda{/st}{/glitch}
+    '''
+
+    menu Demo:
+        "Demo"
+        "Introduccion":
+            jump introduccion
+        "cerrar":
+            pass
+        
     # This ends the game.
-
+label end: 
     return

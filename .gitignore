@@ -1,12 +1,19 @@
+
+
+# Compiled Ren'Py files.
+*.rpyc
+*.rpyb
+*.rpymc
+
+# Ren'Py log files.
+log.txt
+errors.txt
+traceback.txt
+lint.txt
+settings.json
+persistent
+navigation.json
+# Created directories.
 game/cache
 game/saves
 Guiones y demás
-game/saves
-game/cache
-.save
-errors.txt
-log.txt
-traceback.txt
-/.vscode/
-/saves/
-/cahce/

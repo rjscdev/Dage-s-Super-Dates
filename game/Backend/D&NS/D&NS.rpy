@@ -1,6 +1,5 @@
 ##########################
 # made by Robeshiri ⚙: https://github.com/rjscdev
-# 📦this are the text effects for the dialogs
 ##########################
 
 ###########################
@@ -26,8 +25,8 @@ label DNSLoop:
     if (TimeIndex == 0):
         call DayScreen
     
-    if [DayCount, TimeIndex] in Events: #this function calls an event[Day]_[Time] if exist in the Events.rpy file
-        $ labelName ="event"+str(DayCount)+"_"+str(TimeIndex)
+    if [DayCount, TimeIndex] in Events:
+        $ labelName="event"+str(DayCount)+"_"+str(TimeIndex)
         call expression labelName
         
     # this makes the game end if the time cycle is stoped 
@@ -38,12 +37,16 @@ label DNSLoop:
     call DNS_CycleChange
     $ AdvTime()
     
+    call UptDebugText
+    jump DNSLoop
+
 label DNS_CycleChange:
     $ CycleIndex = 0
     while CycleIndex < len(TimeStamps):
         if CycleIndex == TimeIndex:
             $ CurrentTime = TimeStamps[CycleIndex].lower()
-            $ labelName= CurrentTime+"_Options"
+            $ labelName = CurrentTime+"_options" #defines a label structure for the Repeating actions
+            #Example: label Morning_options
             call expression labelName
         $ CycleIndex += 1
         return

@@ -16,8 +16,9 @@ label testplayground:
         "Cambio de nombre":
             jump namechange
         "Sistema de dia y noche":
-            jump DNStest
+            jump dnstest
         "salir":
+            $ stopTimeCycle = True
             jump end
 
 label namechange:
@@ -46,6 +47,5 @@ label namechange:
             jump Demo
         "Nada":
             jump Demo
-
-label DNStest:
-    jump end
+label dnstest:
+    jump DNSLoop

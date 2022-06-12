@@ -9,5 +9,6 @@
 
 label start:
     jump testplayground
-label end: 
+label end:
+    $ stopTimeCycle = True
     return

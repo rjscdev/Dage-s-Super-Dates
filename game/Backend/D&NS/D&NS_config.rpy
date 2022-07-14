@@ -1,16 +1,11 @@
-##########################
-# made by Robeshiri ⚙: https://github.com/rjscdev
-##########################
-
 ###########################
 # time settings⏳⚙
 ##########################
-
 #defines the days of the week📆
 define WD = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 #Defines the Time Stamps🔖
-define TimeStamps = ["Dawn", "Morning", "Noon", "Evening", "Sunset", "Night", "Midnight",]
+define TimeStamps = ["Morning", "Noon", "Evening", "Night", "Midnight", "Dawn"]
 
 ###########################
 # time track⏳📝

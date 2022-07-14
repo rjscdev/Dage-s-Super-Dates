@@ -1,14 +1,10 @@
-##########################
-# made by Robeshiri ⚙: https://github.com/rjscdev
-##########################
-
 ###########################
 # Day & Time System 📆⏳📦
 ##########################
 default stopTimeCycle = False
 init python:
     def AdvTime(periods=1):
-        global TimeIndex, WDindex, DayCount
+        global TimeIndex, WDindex,DayCount
         TimeIndex += periods
 
         #when a day has passed this function resets the TimeIndex to its default value
@@ -21,6 +17,7 @@ init python:
         #when a day has passed, resets WDindex to its defaul value
         while WDindex >= len(WD):
             WDindex -= len(WD)
+
 label DNSLoop:
     if (TimeIndex == 0):
         call DayScreen
@@ -45,8 +42,7 @@ label DNS_CycleChange:
     while CycleIndex < len(TimeStamps):
         if CycleIndex == TimeIndex:
             $ CurrentTime = TimeStamps[CycleIndex].lower()
-            $ labelName = CurrentTime+"_options" #defines a label structure for the Repeating actions
-            #Example: label Morning_options
+            $ labelName="show_"+CurrentTime+"_options"
             call expression labelName
         $ CycleIndex += 1
-        return
+    return
